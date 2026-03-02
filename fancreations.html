@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<body>
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fan Creations</title>
-</head>
     <style>
         body {
             background-color: black;
@@ -16,26 +14,27 @@
             color: lightblue;
         }
     </style>
+</head>
 <body>
     <header>
         <h1>Show us what you've learned!</h1>
-    <nav>
-       <ul>
+        <nav>
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="top-five.html">Top-Five List</a></li>
                 <li><a href="behind-the-scenes.html">Behind the Scenes</a></li>
-                 <li><a href="fan_creations.html">Fan Creations</a></li>
+                <li><a href="fan_creations.html">Fan Creations</a></li>
                 <li><a href="q_and_a.html">Q&A</a></li>
-            </ul>   
-    </nav>
+            </ul>
+        </nav>
+    </header>
     <h1>Fan Creations</h1>
     <p>Share your artwork, stories, and more here!</p>
-  
-<form action="/upload_page.php" method="POST" enctype="multipart/form-data">
-    <label for="file-upload">Choose a file to upload:</label>
-    <input type="file" id="file-upload" name="filename">
-    <button type="submit">Submit</button>
-</form>
-  
+    <form action="/upload_page.php" method="POST" enctype="multipart/form-data">
+        <label for="file-upload">Choose a file to upload:</label>
+        <input type="file" id="file-upload" name="filename">
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
+
