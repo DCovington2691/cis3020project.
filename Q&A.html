@@ -9,9 +9,42 @@
             background-color: black;
             color: lightblue;
             font-family: Arial, sans-serif;
+            padding: 20px;
         }
         a {
             color: lightblue;
+        }
+        .qna-container {
+            margin-top: 20px;
+            border-top: 2px solid lightblue;
+            padding-top: 20px;
+        }
+        textarea, input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #222;
+            color: white;
+            border: 1px solid lightblue;
+        }
+        button {
+            background-color: lightblue;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .question-block {
+            background-color: #111;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 3px solid lightblue;
+        }
+        .answer {
+            margin-left: 20px;
+            color: #b0e0e6;
+            font-style: italic;
         }
     </style>
 </head>
@@ -30,9 +63,34 @@
     </header>
     <main>
         <h1>Q&A</h1>
-        <p>Find answers to common questions. Check back often for updates!</p>
-        <!-- Add a list of questions and answers here -->
+        <p>Find answers to common questions or ask a new one below. Check back often for updates!</p>
+        
+        <!-- Form to add a new question -->
+        <section class="ask-question">
+            <h2>Ask a Question</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required><br>
+                <textarea rows="4" placeholder="Type your question here..." required></textarea><br>
+                <button type="submit">Submit Question</button>
+            </form>
+        </section>
+
+        <!-- Section to display questions and answers -->
+        <section class="qna-container">
+            <h2>Community Q&A</h2>
+            
+            <div class="question-block">
+                <p><strong>Q: How do I join the NextGen project?</strong></p>
+                <p class="answer">A: You can apply through the contact page!</p>
+            </div>
+
+            <div class="question-block">
+                <p><strong>Q: When is the next update?</strong></p>
+                <p class="answer">A: Expected to drop by the end of this month.</p>
+            </div>
+        </section>
     </main>
 </body>
 </html>
+
 
