@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NextGen Financial Knowledge</title>
     <link href="style.css" rel="stylesheet">
+    <!-- Inline CSS for demonstration purposes -->
     <style>
+        /* General body styling */
         body {
             background-color: black;
-            color: medium grey; 
-            font-family: Fantasy, serif;
+            color: #ccc; /* Changed "medium grey" to a valid hex code for better readability */
+            font-family: 'Fantasy', serif;
+            margin: 0; /* Reset default body margin */
+            padding: 0;
+            overflow-x: hidden; /* Hide horizontal scrollbar during animation */
         }
 
         a {
             color: blue;
             transition: color 0.3s ease, transform 0.3s ease;
+            text-decoration: none; /* Remove default underline from links */
         }
 
         a:hover {
@@ -22,18 +28,70 @@
             transform: translateY(-5px); 
         }
 
+        /* Logo container and animation styles */
+        .logo-container {
+            text-align: center;
+            padding-top: 20px;
+        }
+
         .center-logo {
             display: block; 
-            margin-left: auto;
-            margin-right: auto; 
+            margin: 0 auto; /* Center the image within its container */
+            animation: flyIn 2s ease-out forwards; /* Apply the fly-in animation */
+            opacity: 0; /* Start hidden for the animation */
+        }
+
+        /* Keyframe animation for the logo */
+        @keyframes flyIn {
+            0% {
+                transform: translateX(-100vw); /* Start off the left side of the screen */
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0); /* End at its natural position */
+                opacity: 1;
+            }
+        }
+
+        /* Navigation styling */
+        nav ul {
+            list-style-type: none; /* Remove bullet points */
+            margin: 0;
+            padding: 0;
+            display: flex; /* Use flexbox for horizontal layout */
+            justify-content: center; /* Center the links */
+            background-color: #333; /* Add a background for the nav bar */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        nav ul li {
+            margin: 0 15px; /* Add space between list items */
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        nav ul li a:hover {
+            color: orange;
+            transform: none; /* Remove the translateY effect from nav links to keep them aligned */
+        }
+
+        /* Main content styling for better layout */
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #1a1a1a;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
-    <img src="nextGen.png" alt="Logo" class="center-logo">
-    
     <header>
-        <h1>NextGen Financial Knowledge</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -44,6 +102,12 @@
             </ul>
         </nav>
     </header>
+
+    <div class="logo-container">
+         <!-- The h1 has been moved inside the container for layout purposes -->
+        <h1>NextGen Financial Knowledge</h1>
+        <img src="nextGen.png" alt="Logo" class="center-logo">
+    </div>
 
     <main>
         <h2>Welcome to NextGen Financial Knowledge</h2>
@@ -60,11 +124,6 @@
         <h2>About this Website</h2>
         <p>This website features a top-five list and some behind-the-scenes content. You can use the navigation links above to explore the different pages.</p>
     </main>
-
-    <footer>
-        <p>&copy; 2026 NextGen Financial Knowledge CIS Project</p>
-        <p>&copy; 2026 NextGen CIS 3020</p>
-    </footer>
 </body>
 </html>
 
