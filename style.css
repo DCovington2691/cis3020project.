@@ -1,1 +1,25 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+body {
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  
+  
+  background: radial-gradient(ellipse, #ffffff 0%, #add8e6 70%);
+  
+ 
+  background-attachment: fixed;
+}
 
+
+.center-logo {
+  max-width: 300px; 
+  height: auto;
+  
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+}
