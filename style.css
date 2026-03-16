@@ -1,10 +1,5 @@
 body {
-  display: flex;
-  justify-content: center; 
-  align-items: center;    
-  
-  
-  background: radial-gradient(ellipse, #ffffff 0%, #add8e6 70%);
+    background: radial-gradient(ellipse, #ffffff 0%, #add8e6 70%);
   
  
   background-attachment: fixed;
