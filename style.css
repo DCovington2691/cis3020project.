@@ -1,6 +1,7 @@
 body {
     background: radial-gradient(ellipse, #ffffff 0%, #add8e6 70%);
-  
+ 
+    font-family: Fantasy, serif;
  
   background-attachment: fixed;
 }
