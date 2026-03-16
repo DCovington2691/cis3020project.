@@ -6,8 +6,26 @@
     <title>Fan Creations</title>
         <link href="style.css" rel="stylesheet">
     <style>
+       body {
+            background-color: black;
+            color: grey; 
+            font-family: Fantasy, serif;
+        }
+
         a {
             color: blue;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        a:hover {
+            color: orange; 
+            transform: translateY(-5px); 
+        }
+
+        .center-logo {
+            display: block; 
+            margin-left: auto;
+            margin-right: auto; 
         }
     </style>
 </head>
