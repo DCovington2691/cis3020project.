@@ -5,6 +5,14 @@ body {
  
   background-attachment: fixed;
 }
+ .outlined-text {
+  color: black; 
+  text-shadow:
+    -1px -1px 0 #FFFFFF,
+    1px -1px 0 #FFFFFF,
+    -1px 1px 0 #FFFFFF,
+    1px 1px 0 #FFFFFF; 
+}
 
 
 .center-logo {
