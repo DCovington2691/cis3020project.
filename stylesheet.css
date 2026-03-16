@@ -1,5 +1,5 @@
 body {
-  background-image: url('/dowunloads/nextGen.png'), 
+  background-image: url('nextGen.png'), 
                     radial-gradient(circle, white, lightblue);
 
   background-repeat: no-repeat, repeat;
