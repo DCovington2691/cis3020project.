@@ -1,7 +1,10 @@
+/* --- Existing Styles --- */
 body {
     background: radial-gradient(ellipse, #ffffff 0%, #add8e6 70%);
     font-family: Fantasy, serif;
     background-attachment: fixed;
+    margin: 0;
+    padding: 0;
 }
 
 .center-logo {
@@ -10,12 +13,50 @@ body {
   filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
 }
 
-/* Add this class to your text element */
 .outlined-text {
-  color: white; /* Body color */
-  -webkit-text-stroke: 1px black; /* Outline width and color */
+  color: white; 
+  -webkit-text-stroke: 1px black; 
   text-stroke: 1px black;
-  font-size: 40px; /* Example size */
+  font-size: 40px;
   font-family: Fantasy, serif;
+}
+
+/* --- New Navigation Bar Styles --- */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.3); /* Frosted effect */
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333; /* Dark text for contrast */
+    font-family: Fantasy, serif;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    background-color: #333;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
