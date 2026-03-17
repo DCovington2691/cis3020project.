@@ -1,92 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NextGen Financial Knowledge</title>
-<link href="style.css" rel="stylesheet">
-<style>
-    /* Modernized Font Addition */
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        margin: 0;
-        padding: 0;
-    }
-
-    @keyframes flyIn {
-        0% { transform: translateY(-100px); opacity: 0; }
-        100% { transform: translateY(0); opacity: 1; }
-    }
-    .center-logo {
-        display: block;
-        margin: 20px auto;
-        max-width: 200px;
-        animation: flyIn 1.2s ease-out forwards;
-    }
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 20px 0;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
-    /* Link Styles */
-    a {
-        color: blue;
-        text-decoration: none;
-        font-weight: bold;
-        display: inline-block;
-        transition: color 0.3s ease, transform 0.3s ease;
-    }
-    a:hover {
-        color: orange;
-        transform: translateY(-5px);
-    }
-    /* Added some spacing for better readability */
-    main {
-        padding: 20px;
-        max-width: 800px;
-        margin: 0 auto;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen Financial Knowledge</title>
+    <link href="style.css" rel="stylesheet">
+    <style>
+        /* Modernized Font Addition */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        @keyframes flyIn {
+            0% { transform: translateY(-100px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        .center-logo {
+            display: block;
+            margin: 20px auto;
+            /* CHANGED: Increased max-width to make the logo larger */
+            max-width: 400px;
+            height: auto; /* Ensures height scales proportionally */
+            animation: flyIn 1.2s ease-out forwards;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        /* Link Styles */
+        a {
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        a:hover {
+            color: orange;
+            transform: translateY(-5px);
+        }
+        /* Added some spacing for better readability */
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
-<header>
-    <img src="nextGen.png" alt="Logo" class="center-logo">
-    <h1>NextGen Financial Knowledge</h1>
-    <nav>
+    <header>
+        <img src="nextGen.png" alt="Logo" class="center-logo">
+        <h1>NextGen Financial Knowledge</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="top-five.html">Top-Five List</a></li>
+                <li><a href="behind-the-scenes.html">Behind the Scenes</a></li>
+                <li><a href="fancreations.html">Fan Creations</a></li>
+                <li><a href="Q&A.html">Q&A</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to NextGen Financial Knowledge</h2>
+        <p>This website is the ultimate resource for helping our youth understand and gain the financial literacy it takes to reach financial freedom.</p>
+        <h3>Content</h3>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="top-five.html">Top-Five List</a></li>
-            <li><a href="behind-the-scenes.html">Behind the Scenes</a></li>
-            <li><a href="fancreations.html">Fan Creations</a></li>
-            <li><a href="Q&A.html">Q&A</a></li>
+            <li>About Us</li>
+            <li>Our Goals for Our Youth</li>
+            <li>Guide to Financial Literacy</li>
+            <li>KnowledgeBase to Guide Your Steps</li>
         </ul>
-    </nav>
-</header>
-<main>
-    <h2>Welcome to NextGen Financial Knowledge</h2>
-    <p>This website is the ultimate resource for helping our youth understand and gain the financial literacy it takes to reach financial freedom.</p>
-    <h3>Content</h3>
-    <ul>
-        <li>About Us</li>
-        <li>Our Goals for Our Youth</li>
-        <li>Guide to Financial Literacy</li>
-        <li>KnowledgeBase to Guide Your Steps</li>
-    </ul>
-</main>
-<footer>
-    <p>&copy; 2026 NextGen Financial Knowledge CIS Project</p>
-    <p>&copy; 2026 NextGen CIS 3020</p>
-</footer>
+    </main>
+    <footer>
+        <p>&copy; 2026 NextGen Financial Knowledge CIS Project</p>
+        <p>&copy; 2026 NextGen CIS 3020</p>
+    </footer>
 </body>
 </html>
