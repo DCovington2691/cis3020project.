@@ -12,6 +12,20 @@ body {
   
   filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
 }
+nav ul {
+    list-style: none;
+    padding: 15px 30px; /* Adds space inside the border */
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    /* Smooth Border Styles */
+    border: 1px solid #e0e0e0; /* Light, clean line */
+    border-radius: 50px;       /* Pill-shaped rounding */
+    background-color: #ffffff; /* Ensures contrast */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft outer glow */
+}
 
 .outlined-text {
     color: Dark Grey; 
