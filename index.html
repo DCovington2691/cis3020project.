@@ -6,90 +6,52 @@
     <title>NextGen Financial Knowledge</title>
     <link href="style.css" rel="stylesheet">
     <style>
-    @keyframes flyIn {
-        0% {
-            transform: translateY(-100px);
-            opacity: 0;
+        @keyframes flyIn {
+            0% { transform: translateY(-100px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
         }
-        100% {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
 
-    .center-logo {
-        display: block;
-        margin: 20px auto;
-        max-width: 200px;
-        /* Apply the animation */
-        animation: flyIn 1.2s ease-out forwards;
-    }
-
-    /* 2. Header and Title Centering */
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    /* 3. Horizontal Navigation */
-    nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 20px 0;
-        display: flex;         /* Makes the list items sit side-by-side */
-        justify-content: center;
-        gap: 20px;            /* Modern way to add spacing between items */
-    }
-
-    /* Link Styles */
-    a {
-        color: blue;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s ease, transform 0.3s ease;
-    }
-
-    a:hover {
-        color: orange; 
-        transform: translateY(-5px); 
-    }
         .center-logo {
             display: block;
-            margin: 0 auto 20px auto;
-            max-width: 200px; /* Adjust size as needed */
+            margin: 20px auto;
+            max-width: 200px;
+            animation: flyIn 1.2s ease-out forwards;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
 
         /* Link Styles */
         a {
             color: blue;
             text-decoration: none;
+            font-weight: bold;
             display: inline-block;
             transition: color 0.3s ease, transform 0.3s ease;
         }
 
         a:hover {
-            color: orange; 
-            transform: translateY(-5px); 
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 15px;
+            color: orange;
+            transform: translateY(-5px);
         }
     </style>
 </head>
 <body>
     <header>
-        <!-- The img tag belongs here in the body, not in the style tag -->
         <img src="nextGen.png" alt="Logo" class="center-logo">
-        
         <h1>NextGen Financial Knowledge</h1>
         <nav>
             <ul>
@@ -124,6 +86,7 @@
     </footer>
 </body>
 </html>
+
 
 
     </main>
