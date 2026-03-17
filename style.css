@@ -34,7 +34,7 @@ body {
 
 /* --- Navigation Bar Styles (Fixed) --- */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.3); /* Frosted effect */
+    background-color: rgba(99, 99, 99, 0.3); 
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
