@@ -5,81 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NextGen Financial Knowledge</title>
     <style>
-        body { 
-            background-color: black; 
-            color: #ccc; 
-            font-family: 'Fantasy', serif; 
-            margin: 0; 
-            padding: 0; 
-            overflow-x: hidden; 
+        body {
+            background-color: black;
+            color: #ccc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cleaned up font for readability */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
 
-        a { 
-            color: #4da6ff; /* Lighter blue for readability */
-            transition: color 0.3s ease, transform 0.3s ease; 
-            text-decoration: none; 
+        /* --- Logo Section --- */
+        .logo-container {
+            text-align: center;
+            padding: 40px 20px;
         }
 
-        a:hover { 
-            color: orange; 
-            transform: translateY(-5px); 
-        }
-
-        .logo-container { text-align: center; padding: 20px; }
-
-        .center-logo { 
+        .center-logo {
             display: inline-block;
-            animation: flyIn 2s ease-out forwards; 
-            font-size: 3rem; /* Placeholder for an actual logo image */
+            animation: flyIn 2s ease-out forwards;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #4da6ff;
+            letter-spacing: 2px;
         }
 
-        @keyframes flyIn { 
-            0% { transform: translateX(-100vw); opacity: 0; } 
-            100% { transform: translateX(0); opacity: 1; } 
+        @keyframes flyIn {
+            0% { transform: translateX(-100vw); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
         }
 
-        nav ul { 
-            list-style-type: none; 
-            margin: 0; padding: 0; 
-            display: flex; 
-            justify-content: center; 
-            background-color: #333; 
+        /* --- Enhanced Navigation --- */
+        nav {
+            background: rgba(255, 255, 255, 0.05); /* Glassmorphism effect */
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        nav ul li a { 
-            display: block; 
-            padding: 15px 20px; 
-            color: white; 
-            text-transform: uppercase; 
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
         }
 
-        main { 
-            padding: 20px; 
-            max-width: 800px; 
-            margin: 20px auto; 
-            background: #1a1a1a; 
-            border-radius: 8px;
+        nav ul li {
+            position: relative;
         }
+
+        nav ul li a {
+            display: block;
+            padding: 20px 25px;
+            color: white;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        /* Hover Effect: Sliding Underline */
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 15px;
+            left: 50%;
+            background-color: orange;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav ul li a:hover {
+            color: orange;
+        }
+
+        nav ul li a:hover::after {
+            width: 60%;
+        }
+
+        /* --- Main Content --- */
+        main {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #1a1a1a;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h1 { color: #4da6ff; }
     </style>
 </head>
 <body>
 
-    <div class="logo-container">
-        <div class="center-logo">🚀 NEXTGEN</div>
-    </div>
+<div class="logo-container">
+    <div class="center-logo">🚀 NEXTGEN</div>
+</div>
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Markets</a></li>
-            <li><a href="#">Education</a></li>
-        </ul>
-    </nav>
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Markets</a></li>
+        <li><a href="#">Education</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
 
-    <main>
-        <h1>Welcome to NextGen Financial</h1>
-        <p>Your journey to financial literacy starts here.</p>
-    </main>
+<main>
+    <h1>Welcome to NextGen Financial</h1>
+    <p>Your journey to financial literacy starts here. Explore our markets and educational tools to build your future.</p>
+</main>
 
 </body>
 </html>
