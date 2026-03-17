@@ -4,37 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NextGen Financial Knowledge</title>
-    <link href="style.css" rel="stylesheet">
-    
+    <style>
+        body { 
+            background-color: black; 
+            color: #ccc; 
+            font-family: 'Fantasy', serif; 
+            margin: 0; 
+            padding: 0; 
+            overflow-x: hidden; 
+        }
+
+        a { 
+            color: #4da6ff; /* Lighter blue for readability */
+            transition: color 0.3s ease, transform 0.3s ease; 
+            text-decoration: none; 
+        }
+
+        a:hover { 
+            color: orange; 
+            transform: translateY(-5px); 
+        }
+
+        .logo-container { text-align: center; padding: 20px; }
+
+        .center-logo { 
+            display: inline-block;
+            animation: flyIn 2s ease-out forwards; 
+            font-size: 3rem; /* Placeholder for an actual logo image */
+        }
+
+        @keyframes flyIn { 
+            0% { transform: translateX(-100vw); opacity: 0; } 
+            100% { transform: translateX(0); opacity: 1; } 
+        }
+
+        nav ul { 
+            list-style-type: none; 
+            margin: 0; padding: 0; 
+            display: flex; 
+            justify-content: center; 
+            background-color: #333; 
+        }
+
+        nav ul li a { 
+            display: block; 
+            padding: 15px 20px; 
+            color: white; 
+            text-transform: uppercase; 
+        }
+
+        main { 
+            padding: 20px; 
+            max-width: 800px; 
+            margin: 20px auto; 
+            background: #1a1a1a; 
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="nextGen.png" alt="Logo" class="center-logo">
-        <h1>NextGen Financial Knowledge</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="top-five.html">Top-Five List</a></li>
-                <li><a href="behind-the-scenes.html">Behind the Scenes</a></li>
-                <li><a href="fancreations.html">Fan Creations</a></li>
-                <li><a href="Q&A.html">Q&A</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>Welcome to NextGen Financial Knowledge</h2>
-        <p>This website is the ultimate resource for helping our youth understand and gain the financial literacy it takes to reach financial freedom.</p>
-        <h3>Content</h3>
+
+    <div class="logo-container">
+        <div class="center-logo">🚀 NEXTGEN</div>
+    </div>
+
+    <nav>
         <ul>
-            <li>About Us</li>
-            <li>Our Goals for Our Youth</li>
-            <li>Guide to Financial Literacy</li>
-            <li>KnowledgeBase to Guide Your Steps</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Markets</a></li>
+            <li><a href="#">Education</a></li>
         </ul>
+    </nav>
+
+    <main>
+        <h1>Welcome to NextGen Financial</h1>
+        <p>Your journey to financial literacy starts here.</p>
     </main>
-    <footer>
-        <p>&copy; 2026 NextGen Financial Knowledge CIS Project</p>
-        <p>&copy; 2026 NextGen CIS 3020</p>
-    </footer>
+
 </body>
 </html>
