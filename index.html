@@ -7,6 +7,60 @@
     <link href="style.css" rel="stylesheet">
     <style>
 
+        <style>
+    /* 1. Fly-in Animation for Logo */
+    @keyframes flyIn {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .center-logo {
+        display: block;
+        margin: 20px auto;
+        max-width: 200px;
+        /* Apply the animation */
+        animation: flyIn 1.2s ease-out forwards;
+    }
+
+    /* 2. Header and Title Centering */
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* 3. Horizontal Navigation */
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+        display: flex;         /* Makes the list items sit side-by-side */
+        justify-content: center;
+        gap: 20px;            /* Modern way to add spacing between items */
+    }
+
+    /* Link Styles */
+    a {
+        color: blue;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    a:hover {
+        color: orange; 
+        transform: translateY(-5px); 
+    }
+</style>
+
+
         /* Centering the logo image */
         .center-logo {
             display: block;
