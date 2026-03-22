@@ -1,97 +1,21 @@
-/* --- Global Styles & Radial Background --- */
-body {
-    margin: 0;
-    min-height: 100vh;
-    /* Radial white to light blue background */
-    background: radial-gradient(circle at center, #ffffff 0%, #b3e5fc 100%);
-    font-family: 'Segoe UI', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 180px; /* Added padding to prevent content from hiding behind sticky header */
-    position: relative; /* Required for the watermark positioning */
-    z-index: 1; /* Establishes stacking context */
-}
-
 /* --- Watermark Logo Background --- */
 body::before {
     content: "";
-    position: fixed; /* Stays in place while scrolling */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50vw; /* Adjust size based on viewport width */
-    max-width: 500px; /* Maximum size */
-    height: 50vh; /* Adjust size based on viewport height */
-    background-image: url('path/to/your-logo.png'); /* CHANGE THIS PATH */
+    position: fixed;            /* Stays in place while scrolling */
+    top: 0;                     /* Start at the top */
+    left: 0;                    /* Start at the left */
+    width: 100%;                /* Cover full width */
+    height: 100%;               /* Cover full height */
+    
+    /* Background properties for centering and transparency */
+    background-image: url('path/to/your-logo.png'); 
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    opacity: 0.1; /* <--- THIS MAKES IT SEE-THRU (0.0 to 1.0) */
-    z-index: -1; /* Puts it behind all content */
-    pointer-events: none; /* Allows clicking through the logo */
+    background-position: center; /* Centers image horizontally and vertically */
+    background-size: contain;   /* Scales image without cropping */
+    
+    /* Transparency and Layering */
+    opacity: 0.1;               /* 0.0 (invisible) to 1.0 (fully visible) */
+    z-index: -1;                /* Puts it behind all content */
+    pointer-events: none;       /* Allows clicking through to elements below */
 }
 
-/* --- Header & Logo Styling --- */
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-    width: 100%;
-    position: fixed; /* Changed to fixed for top pinning */
-    top: 0;
-    z-index: 1000;
-    background: radial-gradient(circle at center, #ffffff 0%, #b3e5fc 100%); /* Keeps background consistent */
-}
-
-/* Matches your <img class="center-logo"> */
-.center-logo {
-    max-height: 160px; /* Increased size */
-    width: auto;
-    margin-bottom: 5px;
-    /* Animation Properties */
-    animation: fadeInDown 1s ease-out, logoBreath 4s ease-in-out infinite;
-}
-
-header h1 {
-    font-size: 24px;
-    color: #333;
-    margin: 0 0 10px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* --- Navigation Bar (Matches your <nav> tag) --- */
-nav {
-    background-color: rgba(99, 99, 99, 0.8);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
-    padding: 0.6rem 0;
-    border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    width: 95%; /* Increased width */
-    max-width: 1200px; /* Increased max-width */
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 30px; /* Increased gap between items */
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%; /* Ensures flex-grow */
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 14px; /* Slightly larger text */
-    padding: 8px 20px; /* Increased padding */
-    border-radius: 25px;
-    transition: all 0.4s ease;
-}
