@@ -43,7 +43,7 @@ header {
 /* Logic for logo placed outside header */
 .center-logo {
     max-height: 200px; 
-    width: auto;
+    width: 150;
     margin-top: 10px;
     margin-bottom: 5px;
     display: block;
