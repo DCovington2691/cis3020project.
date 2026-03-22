@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - NextGen Financial Knowledge</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <img src="nextGen.png" alt="NextGen Logo" class="center-logo">
+    <header>
+        <h1>NextGen Financial Knowledge</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="top-five.html">Top-Five List</a></li>
+                <li><a href="behind-the-scenes.html">Behind the Scenes</a></li>
+                <li><a href="fancreations.html">Fan Creations</a></li>
+                <li><a href="Q&A.html">Q&A</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Create Your Profile</h2>
+        <p>Join NextGen to track your financial literacy progress and unlock new goals.</p>
+
+        <!-- Progress Tracking Visual -->
+        <div class="progress-container">
+            <label for="profile-progress">Profile Setup Progress:</label>
+            <progress id="profile-progress" value="25" max="100"></progress>
+            <span>25% Complete</span>
+        </div>
+
+        <form action="profile.html" method="POST" class="registration-form">
+            <fieldset>
+                <legend>Account Information</legend>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="Choose a unique username">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required placeholder="example@mail.com">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required minlength="8">
+            </fieldset>
+
+            <fieldset>
+                <legend>Financial Goals</legend>
+                <p>What are you most interested in learning?</p>
+                <label><input type="checkbox" name="goals" value="budgeting"> Budgeting & Saving</label><br>
+                <label><input type="checkbox" name="goals" value="investing"> Investing Basics</label><br>
+                <label><input type="checkbox" name="goals" value="credit"> Managing Credit</label><br>
+                <label><input type="checkbox" name="goals" value="taxes"> Understanding Taxes</label>
+            </fieldset>
+
+            <button type="submit" class="submit-btn">Create Profile & Start Learning</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NextGen Financial Knowledge CIS Project</p>
+    </footer>
+</body>
+</html>
