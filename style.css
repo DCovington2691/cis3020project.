@@ -2,7 +2,6 @@
 body {
     margin: 0;
     min-height: 100vh;
-    /* Radial white to light blue background */
     background: radial-gradient(circle at center, #ffffff 0%, #b3e5fc 100%);
     font-family: 'Segoe UI', sans-serif;
     display: flex;
@@ -10,24 +9,22 @@ body {
     align-items: center;
 }
 
+/* --- Watermark Logo Background --- */
 body::before {
     content: "";
-    position: fixed;            /* Stays in place while scrolling */
-    top: 0;                     /* Start at the top */
-    left: 0;                    /* Start at the left */
-    width: 100%;                /* Cover full width */
-    height: 100%;               /* Cover full height */
-    
-    /* Background properties for centering and transparency */
-    background-image: url('path/to/your-logo.png'); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* CORRECTED: Path matches your filename */
+    background-image: url('nextGen.png'); 
     background-repeat: no-repeat;
-    background-position: center; /* Centers image horizontally and vertically */
-    background-size: contain;   /* Scales image without cropping */
-    
-    /* Transparency and Layering */
-    opacity: 0.1;               /* 0.0 (invisible) to 1.0 (fully visible) */
-    z-index: -1;                /* Puts it behind all content */
-    pointer-events: none;       /* Allows clicking through to elements below */
+    background-position: center;
+    background-size: 40%; /* Reduced size so it doesn't overwhelm text */
+    opacity: 0.07;        /* Subtle enough to read over */
+    z-index: -1;
+    pointer-events: none;
 }
 
 /* --- Header & Logo Styling --- */
@@ -37,40 +34,21 @@ header {
     align-items: center;
     padding: 20px 0;
     width: 100%;
+    /* Sticky ensures the nav stays at the top */
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
+/* Logic for logo placed outside header */
 .center-logo {
-    /* UPDATED: Increased max-height for larger logo */
     max-height: 120px; 
     width: auto;
+    margin-top: 20px;
     margin-bottom: 10px;
-    
-    /* NEW: Animation Properties */
+    display: block;
+    /* Animations */
     animation: fadeInDown 1s ease-out, logoBreath 4s ease-in-out infinite;
-}
-
-/* NEW: Keyframes for Logo Animations */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes logoBreath {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05); /* Subtle breathing/floating effect */
-    }
 }
 
 header h1 {
@@ -79,16 +57,16 @@ header h1 {
     margin: 0 0 15px 0;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-align: center;
 }
 
-/* --- Navigation Bar Styles (Updated) --- */
+/* --- Navigation Bar --- */
 nav {
-    background-color: rgba(99, 99, 99, 0.7);
+    background-color: rgba(60, 60, 60, 0.7); /* Slightly darker for better readability */
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
-    /* REDUCED: padding from 0.8rem 0 to 0.4rem 0 */
-    padding: 0.4rem 0;
+    padding: 0.5rem 0;
     border-radius: 50px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     width: 90%;
@@ -100,7 +78,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 15px; /* Slightly reduced gap to keep it compact */
+    gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -109,37 +87,48 @@ nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    /* REDUCED: font-size from 14px to 12px */
     font-size: 12px;
-    /* REDUCED: padding from 8px 18px to 5px 12px */
-    padding: 5px 12px;
-    border-radius: 5px;
+    padding: 6px 14px;
+    border-radius: 20px;
     transition: all 0.4s ease;
     text-transform: uppercase;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.4);
 }
 
 /* --- Metallic Hover Effect --- */
 nav a:hover {
     background: linear-gradient(135deg, #a0a0a0 0%, #ffffff 50%, #a0a0a0 100%);
     color: #000;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.4), inset 0 0 10px rgba(255,255,255,0.8);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3), inset 0 0 5px rgba(255,255,255,0.8);
     transform: translateY(-2px);
 }
 
-/* --- Main Content Padding --- */
+/* --- Content Areas --- */
 main {
-    padding: 20px;
+    padding: 40px 20px;
     max-width: 800px;
     line-height: 1.6;
     color: #333;
+    text-align: left;
 }
 
 footer {
     margin-top: auto;
-    padding: 20px;
-    font-size: 14px;
+    padding: 30px;
+    font-size: 13px;
     color: #666;
+    text-align: center;
+}
+
+/* --- Keyframes --- */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes logoBreath {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
 }
 
 
