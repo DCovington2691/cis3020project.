@@ -1,142 +1,139 @@
 /* --- Global Styles & Radial Background --- */
+/* --- Global Styles & Radial Background --- */
 body {
-    margin: 0;
-    min-height: 100vh;
-    background: radial-gradient(circle at center, #ffffff 0%, #b3e5fc 100%);
-    font-family: 'Segoe UI', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  /* Use a transparent-to-solid gradient or ensure it covers the full viewport */
+  background: radial-gradient(circle at center, #ffffff 0%, #b3e5fc 100%);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* --- Watermark Logo Background --- */
 body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* CORRECTED: Path matches your filename */
-    background-image: url('nextGen.png'); 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 40%; /* Reduced size so it doesn't overwhelm text */
-    opacity: 0.07;        /* Subtle enough to read over */
-    z-index: -1;
-    pointer-events: none;
+  content: ""; /* Required for pseudo-elements to display */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('nextGen.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
+  opacity: 0.07;
+  z-index: -1; /* Keep behind content */
+  pointer-events: none;
 }
 
 /* --- Header & Logo Styling --- */
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-    width: 100%;
-    /* Sticky ensures the nav stays at the top */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  width: 100%;
+  position: sticky; /* Nav stays at the top during scroll */
+  top: 0;
+  z-index: 1000;
+  background-color: transparent; /* Allows radial background to show through */
 }
 
-/* Logic for logo placed outside header */
 .center-logo {
-    max-height: 200px; 
-    width: 150;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    display: block;
-    /* Animations */
-    animation: fadeInDown 1s ease-out, logoBreath 4s ease-in-out infinite;
+  max-height: 200px;
+  width: 150px; /* FIXED: Added 'px' unit */
+  margin-top: 10px;
+  margin-bottom: 5px;
+  display: block;
+  animation: fadeInDown 1s ease-out, logoBreath 4s ease-in-out infinite;
 }
 
 header h1 {
-    font-size: 24px;
-    color: #333;
-    margin: 0 0 15px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin: 0 0 15px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
 }
 
 h2 {
-    text-align: center;      /* Centers the text */
-    font-size: 32px;         /* Makes the font bigger */
-    color: #666;             
-    margin-top: 30px;        
-    margin-bottom: 20px;     
+  text-align: center;
+  font-size: 32px;
+  color: #666;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 /* --- Navigation Bar --- */
 nav {
-    background-color: rgba(60, 60, 60, 0.7); /* Slightly darker for better readability */
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
-    padding: 0.5rem 0;
-    border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    width: 90%;
-    max-width: 1000px;
+  background-color: rgba(60, 60, 60, 0.7); /* Translucent background for blur */
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  width: 90%;
+  max-width: 1000px;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 12px;
-    padding: 6px 14px;
-    border-radius: 20px;
-    transition: all 0.4s ease;
-    text-transform: uppercase;
-    box-shadow: inset 0 0 8px rgba(0,0,0,0.4);
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  text-transform: uppercase;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.4);
 }
 
 /* --- Metallic Hover Effect --- */
 nav a:hover {
-    background: linear-gradient(135deg, #a0a0a0 0%, #ffffff 50%, #a0a0a0 100%);
-    color: #000;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3), inset 0 0 5px rgba(255,255,255,0.8);
-    transform: translateY(-2px);
+  background: linear-gradient(135deg, #a0a0a0 0%, #ffffff 50%, #a0a0a0 100%);
+  color: #000;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3), inset 0 0 5px rgba(255,255,255,0.8);
+  transform: translateY(-2px);
 }
 
 /* --- Content Areas --- */
 main {
-    padding: 40px 20px;
-    max-width: 800px;
-    line-height: 1.6;
-    color: #333;
-    text-align: left;
+  padding: 40px 20px;
+  max-width: 800px;
+  line-height: 1.6;
+  color: #333;
+  text-align: left;
 }
 
 footer {
-    margin-top: auto;
-    padding: 30px;
-    font-size: 13px;
-    color: #666;
-    text-align: center;
+  margin-top: auto;
+  padding: 30px;
+  font-size: 13px;
+  color: #666;
+  text-align: center;
 }
 
 /* --- Keyframes --- */
 @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes logoBreath {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.04); }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
 }
-
-
