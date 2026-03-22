@@ -26,9 +26,9 @@ header {
 
 /* Matches your <img class="center-logo"> */
 .center-logo {
-    max-height: 160px; /* Increased size */
+    max-height: 300px; /* Increased size */
     width: auto;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     /* Animation Properties */
     animation: fadeInDown 1s ease-out, logoBreath 4s ease-in-out infinite;
 }
