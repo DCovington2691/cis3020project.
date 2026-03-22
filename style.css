@@ -23,9 +23,34 @@ header {
 }
 
 .center-logo {
-  max-height: 40px; /* Reduced from 80px to make it smaller */
-  width: auto;
-  margin-bottom: 10px;
+    /* UPDATED: Increased max-height for larger logo */
+    max-height: 120px; 
+    width: auto;
+    margin-bottom: 10px;
+    
+    /* NEW: Animation Properties */
+    animation: fadeInDown 1s ease-out, logoBreath 4s ease-in-out infinite;
+}
+
+/* NEW: Keyframes for Logo Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes logoBreath {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Subtle breathing/floating effect */
+    }
 }
 
 header h1 {
@@ -36,7 +61,6 @@ header h1 {
     letter-spacing: 1px;
 }
 
-/* --- Navigation Bar Styles --- */
 /* --- Navigation Bar Styles (Updated) --- */
 nav {
     background-color: rgba(99, 99, 99, 0.7);
@@ -44,7 +68,7 @@ nav {
     display: flex;
     justify-content: center;
     /* REDUCED: padding from 0.8rem 0 to 0.4rem 0 */
-    padding: 0.4rem 0; 
+    padding: 0.4rem 0;
     border-radius: 50px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     width: 90%;
@@ -66,9 +90,9 @@ nav a {
     color: white;
     font-weight: bold;
     /* REDUCED: font-size from 14px to 12px */
-    font-size: 12px; 
+    font-size: 12px;
     /* REDUCED: padding from 8px 18px to 5px 12px */
-    padding: 5px 12px; 
+    padding: 5px 12px;
     border-radius: 5px;
     transition: all 0.4s ease;
     text-transform: uppercase;
@@ -97,3 +121,4 @@ footer {
     font-size: 14px;
     color: #666;
 }
+
