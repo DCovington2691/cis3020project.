@@ -4,65 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q&A Page</title>
-        <link href="style.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: black;
-            color: grey; 
-            font-family: Fantasy, serif;
-        }
-
-        a {
-            color: blue;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        a:hover {
-            color: orange; 
-            transform: translateY(-5px); 
-        }
-
-        .center-logo {
-            display: block; 
-            margin-left: auto;
-            margin-right: auto; 
-        }
-        a {
-            color: blue;
-        }
-        .qna-container {
-            margin-top: 20px;
-            border-top: 2px solid lightblue;
-            padding-top: 20px;
-        }
-        textarea, input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            background-color: #222;
-            color: white;
-            border: 1px solid lightblue;
-        }
-        button {
-            background-color: lightblue;
-            color: black;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .question-block {
-            background-color: #111;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-left: 3px solid lightblue;
-        }
-        .answer {
-            margin-left: 20px;
-            color: #b0e0e6;
-            font-style: italic;
-        }
-    </style>
+    <!-- This line links to your external file -->
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -72,16 +15,15 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="top-five.html">Top-Five List</a></li>
                 <li><a href="behind-the-scenes.html">Behind the Scenes</a></li>
-                 <li><a href="fancreations.html">Fan Creations</a></li>
-                  <li><a href="Q&A.html">Q&A</a></li>
+                <li><a href="fancreations.html">Fan Creations</a></li>
+                <li><a href="Q&A.html">Q&A</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h1>Q&A</h1>
-        <p>Find answers to common questions or ask a new one below. Check back often for updates!</p>
-        
-        <!-- Form to add a new question -->
+        <p>Find answers to common questions or ask a new one below.</p>
+
         <section class="ask-question">
             <h2>Ask a Question</h2>
             <form>
@@ -91,15 +33,12 @@
             </form>
         </section>
 
-        <!-- Section to display questions and answers -->
         <section class="qna-container">
             <h2>Community Q&A</h2>
-            
             <div class="question-block">
                 <p><strong>Q: How do I join the NextGen project?</strong></p>
                 <p class="answer">A: You can apply through the contact page!</p>
             </div>
-
             <div class="question-block">
                 <p><strong>Q: When is the next update?</strong></p>
                 <p class="answer">A: Expected to drop by the end of this month.</p>
@@ -108,5 +47,6 @@
     </main>
 </body>
 </html>
+
 
 
