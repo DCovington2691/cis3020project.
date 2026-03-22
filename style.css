@@ -9,6 +9,27 @@ body {
     flex-direction: column;
     align-items: center;
     padding-top: 180px; /* Added padding to prevent content from hiding behind sticky header */
+    position: relative; /* Required for the watermark positioning */
+    z-index: 1; /* Establishes stacking context */
+}
+
+/* --- Watermark Logo Background --- */
+body::before {
+    content: "";
+    position: fixed; /* Stays in place while scrolling */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw; /* Adjust size based on viewport width */
+    max-width: 500px; /* Maximum size */
+    height: 50vh; /* Adjust size based on viewport height */
+    background-image: url('path/to/your-logo.png'); /* CHANGE THIS PATH */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.1; /* <--- THIS MAKES IT SEE-THRU (0.0 to 1.0) */
+    z-index: -1; /* Puts it behind all content */
+    pointer-events: none; /* Allows clicking through the logo */
 }
 
 /* --- Header & Logo Styling --- */
@@ -26,9 +47,9 @@ header {
 
 /* Matches your <img class="center-logo"> */
 .center-logo {
-    max-height: 300px; /* Increased size */
+    max-height: 160px; /* Increased size */
     width: auto;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     /* Animation Properties */
     animation: fadeInDown 1s ease-out, logoBreath 4s ease-in-out infinite;
 }
@@ -73,21 +94,4 @@ nav a {
     padding: 8px 20px; /* Increased padding */
     border-radius: 25px;
     transition: all 0.4s ease;
-    text-transform: uppercase;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
 }
-
-/* --- Metallic Hover Effect --- */
-nav a:hover {
-    background: linear-gradient(135deg, #a0a0a0 0%, #ffffff 50%, #a0a0a0 100%);
-    color: #000;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.4), inset 0 0 10px rgba(255,255,255,0.8);
-    transform: translateY(-2px);
-}
-
-/* --- Main Content (Matches your <main> tag) --- */
-main {
-    padding: 20px;
-    max-width: 800px;
-    line-height: 1.6;
-    color: #333;
