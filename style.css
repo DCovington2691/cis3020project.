@@ -60,6 +60,14 @@ header h1 {
     text-align: center;
 }
 
+h2 {
+    text-align: center;      /* Centers the text */
+    font-size: 32px;         /* Makes the font bigger */
+    color: #666;             
+    margin-top: 30px;        
+    margin-bottom: 20px;     
+}
+
 /* --- Navigation Bar --- */
 nav {
     background-color: rgba(60, 60, 60, 0.7); /* Slightly darker for better readability */
