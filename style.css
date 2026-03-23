@@ -45,14 +45,19 @@ header {
   animation: fadeInDown 1s ease-out, logoBreath 4s ease-in-out infinite;
 }
 
-header h1 {
-  font-size: 24px;
-  color: #333;
+h1 {
+  font-size: 40px;
   margin: 0 0 15px 0;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
+  font-family: sans-serif;
+  background: linear-gradient(to bottom, #cfd8dc 0%, #78909c 50%, #455a64 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 1px 0 #bbb, 0 2px 0 #999, 0 3px 0 #888, 0 4px 0 #777, 0 5px 0 #666, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
 }
+
 
 h2 {
   text-align: center;
