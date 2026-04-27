@@ -4,11 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Savings Tool</title>
-
-  <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        /* Adding some quick styles to make the tool usable */
+        .savings-form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+        .savings-form input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        #result-display {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-        <img src="nextGen.png" alt="NextGen Logo" class="center-logo">
+    <img src="nextGen.png" alt="NextGen Logo" class="center-logo">
     <header>
         <h1>Keep Track of Your Savings Milestones</h1>
         <nav>
@@ -19,43 +40,60 @@
                 <li><a href="fancreations.html">Fan Creations</a></li>
                 <li><a href="Q&A.html">Q&A</a></li>
                 <li><a href="register.html">Register</a></li>
-              <li><a href="SavingsTool.html">Savings Tool</a></li>
+                <li><a href="SavingsTool.html">Savings Tool</a></li>
             </ul>
         </nav>
     </header>
- <script>
-document.getElementById('calculate-btn').addEventListener('click', function() {
-    const goal = document.getElementById('goal-name').value;
-    const target = parseFloat(document.getElementById('target-amount').value);
-    const monthly = parseFloat(document.getElementById('monthly-savings').value);
-    const display = document.getElementById('result-display');
 
-    if (!goal || isNaN(target) || isNaN(monthly) || monthly <= 0) {
-        display.innerHTML = "⚠️ Please fill out all fields with valid numbers.";
-        display.style.color = "red";
-        return;
-    }
+    <main class="savings-form">
+        <h2>Savings Calculator</h2>
+        
+        <label for="goal-name">What are you saving for?</label>
+        <input type="text" id="goal-name" placeholder="e.g. New Laptop">
 
-   
-    const months = Math.ceil(target / monthly);
-    const years = (months / 12).toFixed(1);
+        <label for="target-amount">Target Goal Amount ($):</label>
+        <input type="number" id="target-amount" placeholder="500">
 
-    display.style.color = "#2c3e50";
-    let message = `To save for your ${goal}, it will take <strong>${months} months</strong>`;
-    
-    if (months > 12) {
-        message += ` (about ${years} years).`;
-    } else {
-        message += `. You're on the fast track!`;
-    }
+        <label for="monthly-savings">How much can you save per month? ($):</label>
+        <input type="number" id="monthly-savings" placeholder="50">
 
-    display.innerHTML = message;
+        <button id="calculate-btn" style="width: 100%; padding: 10px; cursor: pointer;">Calculate Goal</button>
 
-    if (months > 24) {
-        display.innerHTML += "<p style='font-size: 0.9em; font-weight: normal;'>Tip: Consider looking for ways to increase your monthly contribution to reach your goal faster!</p>";
-    }
-});
-</script>
+        <div id="result-display"></div>
+    </main>
 
+    <script>
+        document.getElementById('calculate-btn').addEventListener('click', function() {
+            const goal = document.getElementById('goal-name').value;
+            const target = parseFloat(document.getElementById('target-amount').value);
+            const monthly = parseFloat(document.getElementById('monthly-savings').value);
+            const display = document.getElementById('result-display');
+
+            // Check if inputs are valid
+            if (!goal || isNaN(target) || isNaN(monthly) || monthly <= 0) {
+                display.innerHTML = "⚠️ Please fill out all fields with valid numbers.";
+                display.style.color = "red";
+                return;
+            }
+
+            const months = Math.ceil(target / monthly);
+            const years = (months / 12).toFixed(1);
+            
+            display.style.color = "#2c3e50";
+            let message = `To save for your ${goal}, it will take <strong>${months} months</strong>`;
+
+            if (months > 12) {
+                message += ` (about ${years} years).`;
+            } else {
+                message += `. You're on the fast track!`;
+            }
+
+            display.innerHTML = message;
+
+            if (months > 24) {
+                display.innerHTML += "<p style='font-size: 0.9em; font-weight: normal; color: #555;'>Tip: Consider looking for ways to increase your monthly contribution to reach your goal faster!</p>";
+            }
+        });
+    </script>
 </body>
 </html>
