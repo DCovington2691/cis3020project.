@@ -4,11 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fan Creations</title>
-    <!-- External Link to CSS -->
     <link href="style.css" rel="stylesheet">
+    <style>
+        /* Fancy Upload Box Styling */
+        .upload-container {
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 30px;
+            border: 2px dashed #cbd5e0;
+            border-radius: 12px;
+            background-color: #f8fafc;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .upload-container:hover {
+            border-color: #4a90e2;
+            background-color: #edf2f7;
+        }
+
+        /* Hide the ugly default input */
+        input[type="file"] {
+            display: none;
+        }
+
+        /* Style the label to look like a button/dropzone */
+        .custom-file-upload {
+            display: inline-block;
+            padding: 12px 24px;
+            cursor: pointer;
+            background: #4a90e2;
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            transition: background 0.2s;
+        }
+
+        .custom-file-upload:hover {
+            background: #357abd;
+        }
+
+        .upload-text {
+            display: block;
+            font-size: 14px;
+            color: #718096;
+            margin-top: 10px;
+        }
+
+        button[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 8px;
+            background-color: #2d3748;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #1a202c;
+        }
+    </style>
 </head>
 <body>
-        <img src="nextGen.png" alt="NextGen Logo" class="center-logo">
+    <img src="nextGen.png" alt="NextGen Logo" class="center-logo">
     <header>
         <h1>Show us what you've learned!</h1>
         <nav>
@@ -22,14 +83,23 @@
             </ul>
         </nav>
     </header>
-    <h1>Fan Creations</h1>
-    <p>Share your artwork, stories, and more here!</p>
-    <form action="/upload_page.php" method="POST" enctype="multipart/form-data">
-        <label for="file-upload">Choose a file to upload:</label>
-        <input type="file" id="file-upload" name="filename">
-        <button type="submit">Submit</button>
-    </form>
+
+    <main style="text-align: center;">
+        <h1>Fan Creations</h1>
+        <p>Share your artwork, stories, and more here!</p>
+
+        <form action="/upload_page.php" method="POST" enctype="multipart/form-data">
+            <div class="upload-container">
+                <label for="file-upload" class="custom-file-upload">
+                    ✨ Choose a file
+                </label>
+                <input type="file" id="file-upload" name="filename">
+                <span class="upload-text">or drag and drop files here</span>
+                <br>
+                <button type="submit">Submit Creation</button>
+            </div>
+        </form>
+    </main>
 </body>
 </html>
-
 
