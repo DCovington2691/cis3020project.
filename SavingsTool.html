@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savings Tool</title>
+
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+        <img src="nextGen.png" alt="NextGen Logo" class="center-logo">
+    <header>
+        <h1>Keep Track of Your Savings Milestones</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="top-five.html">Top-Five List</a></li>
+                <li><a href="behind-the-scenes.html">Behind the Scenes</a></li>
+                <li><a href="fancreations.html">Fan Creations</a></li>
+                <li><a href="Q&A.html">Q&A</a></li>
+                <li><a href="register.html">Register</a></li>
+              <li><a href="SavingsTool.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+ <script>
+document.getElementById('calculate-btn').addEventListener('click', function() {
+    const goal = document.getElementById('goal-name').value;
+    const target = parseFloat(document.getElementById('target-amount').value);
+    const monthly = parseFloat(document.getElementById('monthly-savings').value);
+    const display = document.getElementById('result-display');
+
+    if (!goal || isNaN(target) || isNaN(monthly) || monthly <= 0) {
+        display.innerHTML = "⚠️ Please fill out all fields with valid numbers.";
+        display.style.color = "red";
+        return;
+    }
+
+   
+    const months = Math.ceil(target / monthly);
+    const years = (months / 12).toFixed(1);
+
+    display.style.color = "#2c3e50";
+    let message = `To save for your ${goal}, it will take <strong>${months} months</strong>`;
+    
+    if (months > 12) {
+        message += ` (about ${years} years).`;
+    } else {
+        message += `. You're on the fast track!`;
+    }
+
+    display.innerHTML = message;
+
+    if (months > 24) {
+        display.innerHTML += "<p style='font-size: 0.9em; font-weight: normal;'>Tip: Consider looking for ways to increase your monthly contribution to reach your goal faster!</p>";
+    }
+});
+</script>
+
+</body>
+</html>
