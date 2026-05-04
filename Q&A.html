@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q&A Page</title>
-    <!-- This line links to your external file -->
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
@@ -22,6 +21,18 @@
                 <li><a href="SavingsTool.html">Savings Tool</a></li>
             </ul>
         </nav>
+        <div class="search-container">
+            <form action="/search" method="GET">
+                <input type="text" placeholder="Search KnowledgeBase..." name="search">
+                <select name="category">
+                    <option value="all">All Categories</option>
+                    <option value="literacy">Financial Literacy</option>
+                    <option value="savings">Savings Tools</option>
+                    <option value="faq">Q&A</option>
+                </select>
+                <button type="submit">Search</button>
+            </form>
+        </div>
     </header>
     <main>
         <h1>Q&A</h1>
