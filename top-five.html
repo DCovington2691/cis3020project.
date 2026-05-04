@@ -3,11 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top-Five List</title>
+    <title>Top-Five List - NextGen</title>
     <link href="style.css" rel="stylesheet">
+    <style>
+        /* Slideshow CSS */
+        .slideshow-container {
+            max-width: 600px;
+            position: relative;
+            margin: 30px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .slides {
+            display: none; /* Hide images by default */
+        }
+        .slides img {
+            width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+        /* Style for the list */
+        ol {
+            max-width: 500px;
+            margin: 20px auto;
+            line-height: 2;
+            font-size: 1.1em;
+        }
+    </style>
 </head>
 <body>
-        <img src="nextGen.png" alt="NextGen Logo" class="center-logo">
+    <img src="nextGen.png" alt="NextGen Logo" class="center-logo">
     <header>
         <h1>Top-Five List</h1>
         <nav>
@@ -36,20 +62,24 @@
     </header>
 
     <main>
-        <h2>Top Five Goals Towards Financial Freedom</h2>
+        <h2 style="text-align: center;">Top Five Goals Towards Financial Freedom</h2>
         <ol>
-            <li>Create a Budget</li>
-            <li>Manage Debt</li>
-            <li>Build a Savings</li>
-            <li>Invest for the Future</li>
-            <li>Gain Investment Knowledge & Build a Portfolio</li>
+            <li><strong>Create a Budget:</strong> Track where every dollar goes.</li>
+            <li><strong>Manage Debt:</strong> Focus on high-interest balances first.</li>
+            <li><strong>Build a Savings:</strong> Aim for 3-6 months of expenses.</li>
+            <li><strong>Invest for the Future:</strong> Let compound interest work for you.</li>
+            <li><strong>Build a Portfolio:</strong> Diversify your investment knowledge.</li>
         </ol>
 
         <!-- Slideshow Container -->
         <div class="slideshow-container">
             <div class="slides">
                 <img src="budget.png" alt="Budgeting">
+            </div>
+            <div class="slides">
                 <img src="DebtManage.png" alt="Debt Management">
+            </div>
+            <div class="slides">
                 <img src="savings.png" alt="Savings">
             </div>
         </div>
@@ -58,6 +88,22 @@
     <footer>
         <p>&copy; 2026 NextGen Financial Knowledge CIS Project</p>
     </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+    </script>
 </body>
 </html>
-
